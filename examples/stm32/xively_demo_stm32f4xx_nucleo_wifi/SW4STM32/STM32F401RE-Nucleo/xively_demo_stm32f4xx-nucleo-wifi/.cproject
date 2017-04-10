@@ -4,9 +4,8 @@
 		<cconfiguration id="fr.ac6.managedbuild.config.gnu.cross.exe.debug.1474710539">
 			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="fr.ac6.managedbuild.config.gnu.cross.exe.debug.1474710539" moduleId="org.eclipse.cdt.core.settings" name="IKS01A1_Debug">
 				<macros>
-					<stringMacro name="XI_STMCUBE_PATH" type="VALUE_PATH_DIR" value="/Users/palantir/Work/Xively/stm32f4xx/STM32CubeExpansion_WIFI1_V3.0.1"/>
-					<stringMacro name="XI_CLIENT_PATH" type="VALUE_PATH_DIR" value="../../../../../../.."/>
-					<stringMacro name="XI_MEMS_STMCUBE_PATH" type="VALUE_PATH_DIR" value="/Users/palantir/Work/Xively/stm32f4xx/STM32CubeExpansion_MEMS1_V3.0.0"/>
+					<stringMacro name="XI_MEMS_STMCUBE_PATH" type="VALUE_PATH_DIR" value="/Users/atigyi/Downloads/STM32CubeExpansion_MEMS1_V3.0.0"/>
+					<stringMacro name="XI_STMCUBE_PATH" type="VALUE_PATH_DIR" value="/Users/atigyi/Downloads/STM32CubeExpansion_WIFI1_V3.0.1"/>
 				</macros>
 				<externalSettings>
 					<externalSetting/>
@@ -44,9 +43,9 @@
 									<listOptionValue builtIn="false" value="${XI_STMCUBE_PATH}/Drivers/BSP/STM32F4xx-Nucleo"/>
 									<listOptionValue builtIn="false" value="${XI_STMCUBE_PATH}/Middlewares/ST/STM32_SPWF0xSy/Inc"/>
 									<listOptionValue builtIn="false" value="${XI_STMCUBE_PATH}/Middlewares/ST/STM32_SPWF0xSy/Utils"/>
-									<listOptionValue builtIn="false" value="${XI_CLIENT_PATH}/include"/>
-									<listOptionValue builtIn="false" value="${XI_CLIENT_PATH}/include/bsp"/>
-									<listOptionValue builtIn="false" value="${XI_CLIENT_PATH}/src/bsp/platform/stm32fx_nucleo_wifi/include"/>
+									<listOptionValue builtIn="false" value="../../../../../../../include"/>
+									<listOptionValue builtIn="false" value="../../../../../../../include/bsp"/>
+									<listOptionValue builtIn="false" value="../../../../../../../src/bsp/platform/stm32fx_nucleo_wifi/include"/>
 									<listOptionValue builtIn="false" value="${XI_MEMS_STMCUBE_PATH}/Drivers/BSP/Components/Common"/>
 									<listOptionValue builtIn="false" value="${XI_MEMS_STMCUBE_PATH}/Drivers/BSP/Components/hts221"/>
 									<listOptionValue builtIn="false" value="${XI_MEMS_STMCUBE_PATH}/Drivers/BSP/Components/lis3mdl"/>
@@ -85,7 +84,7 @@
 								</option>
 								<option id="gnu.c.link.option.ldflags.960810064" name="Linker flags" superClass="gnu.c.link.option.ldflags" useByScannerDiscovery="false" value="-specs=nano.specs" valueType="string"/>
 								<option id="gnu.c.link.option.paths.1616543337" name="Library search path (-L)" superClass="gnu.c.link.option.paths" useByScannerDiscovery="false" valueType="libPaths">
-									<listOptionValue builtIn="false" value="${XI_CLIENT_PATH}/bin/stm32fx_nucleo_wifi"/>
+									<listOptionValue builtIn="false" value="../../../../../../../bin/stm32fx_nucleo_wifi"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.c.linker.input.1510740212" superClass="cdt.managedbuild.tool.gnu.c.linker.input">
 									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
@@ -122,9 +121,8 @@
 		<cconfiguration id="fr.ac6.managedbuild.config.gnu.cross.exe.debug.1474710539.895893754">
 			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="fr.ac6.managedbuild.config.gnu.cross.exe.debug.1474710539.895893754" moduleId="org.eclipse.cdt.core.settings" name="IKS01A2_Debug">
 				<macros>
-					<stringMacro name="XI_STMCUBE_PATH" type="VALUE_PATH_DIR" value="/Users/palantir/Work/Xively/stm32f4xx/STM32CubeExpansion_WIFI1_V3.0.1"/>
-					<stringMacro name="XI_CLIENT_PATH" type="VALUE_PATH_DIR" value="../../../../../../.."/>
-					<stringMacro name="XI_MEMS_STMCUBE_PATH" type="VALUE_PATH_DIR" value="/Users/palantir/Work/Xively/stm32f4xx/STM32CubeExpansion_MEMS1_V3.0.0"/>
+					<stringMacro name="XI_MEMS_STMCUBE_PATH" type="VALUE_PATH_DIR" value="/Users/atigyi/Downloads/STM32CubeExpansion_MEMS1_V3.0.0"/>
+					<stringMacro name="XI_STMCUBE_PATH" type="VALUE_PATH_DIR" value="/Users/atigyi/Downloads/STM32CubeExpansion_WIFI1_V3.0.1"/>
 				</macros>
 				<externalSettings>
 					<externalSetting/>
@@ -162,9 +160,9 @@
 									<listOptionValue builtIn="false" value="${XI_STMCUBE_PATH}/Drivers/BSP/STM32F4xx-Nucleo"/>
 									<listOptionValue builtIn="false" value="${XI_STMCUBE_PATH}/Middlewares/ST/STM32_SPWF0xSy/Inc"/>
 									<listOptionValue builtIn="false" value="${XI_STMCUBE_PATH}/Middlewares/ST/STM32_SPWF0xSy/Utils"/>
-									<listOptionValue builtIn="false" value="${XI_CLIENT_PATH}/include"/>
-									<listOptionValue builtIn="false" value="${XI_CLIENT_PATH}/include/bsp"/>
-									<listOptionValue builtIn="false" value="${XI_CLIENT_PATH}/src/bsp/platform/stm32fx_nucleo_wifi/include"/>
+									<listOptionValue builtIn="false" value="../../../../../../../include"/>
+									<listOptionValue builtIn="false" value="../../../../../../../include/bsp"/>
+									<listOptionValue builtIn="false" value="../../../../../../../src/bsp/platform/stm32fx_nucleo_wifi/include"/>
 									<listOptionValue builtIn="false" value="${XI_MEMS_STMCUBE_PATH}/Drivers/BSP/Components/Common"/>
 									<listOptionValue builtIn="false" value="${XI_MEMS_STMCUBE_PATH}/Drivers/BSP/Components/hts221"/>
 									<listOptionValue builtIn="false" value="${XI_MEMS_STMCUBE_PATH}/Drivers/BSP/Components/lis3mdl"/>
@@ -203,7 +201,7 @@
 								</option>
 								<option id="gnu.c.link.option.ldflags.1725050284" name="Linker flags" superClass="gnu.c.link.option.ldflags" useByScannerDiscovery="false" value="-specs=nano.specs" valueType="string"/>
 								<option id="gnu.c.link.option.paths.2071333641" name="Library search path (-L)" superClass="gnu.c.link.option.paths" useByScannerDiscovery="false" valueType="libPaths">
-									<listOptionValue builtIn="false" value="${XI_CLIENT_PATH}/bin/stm32fx_nucleo_wifi"/>
+									<listOptionValue builtIn="false" value="../../../../../../../bin/stm32fx_nucleo_wifi"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.c.linker.input.390594950" superClass="cdt.managedbuild.tool.gnu.c.linker.input">
 									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>

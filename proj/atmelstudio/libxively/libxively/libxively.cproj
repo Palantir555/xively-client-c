@@ -1,0 +1,722 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>7.0</ProjectVersion>
+    <ToolchainName>com.Atmel.ARMGCC.C</ToolchainName>
+    <ProjectGuid>dce6c7e3-ee26-4d79-826b-08594b9ad897</ProjectGuid>
+    <avrdevice>ATSAM4E16E</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>StaticLibrary</OutputType>
+    <Language>C</Language>
+    <OutputFileName>lib$(MSBuildProjectName)</OutputFileName>
+    <OutputFileExtension>.a</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AvrGccProjectExtensions>
+    </AvrGccProjectExtensions>
+    <AssemblyName>libxively</AssemblyName>
+    <Name>libxively</Name>
+    <RootNamespace>libxively</RootNamespace>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <CacheFlash>true</CacheFlash>
+    <ProgFlashFromRam>true</ProgFlashFromRam>
+    <RamSnippetAddress>0x20000000</RamSnippetAddress>
+    <UncachedRange />
+    <preserveEEPROM>true</preserveEEPROM>
+    <OverrideVtorValue>exception_table</OverrideVtorValue>
+    <BootSegment>2</BootSegment>
+    <ResetRule>0</ResetRule>
+    <eraseonlaunchrule>0</eraseonlaunchrule>
+    <EraseKey />
+    <AsfFrameworkConfig>
+      <framework-data xmlns="">
+        <options />
+        <configurations />
+        <files />
+        <documentation help="" />
+        <offline-documentation help="" />
+        <dependencies>
+          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.35.1" />
+        </dependencies>
+      </framework-data>
+    </AsfFrameworkConfig>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <ArmGcc>
+  <armgcc.common.outputfiles.hex>True</armgcc.common.outputfiles.hex>
+  <armgcc.common.outputfiles.lss>True</armgcc.common.outputfiles.lss>
+  <armgcc.common.outputfiles.eep>True</armgcc.common.outputfiles.eep>
+  <armgcc.common.outputfiles.bin>True</armgcc.common.outputfiles.bin>
+  <armgcc.common.outputfiles.srec>True</armgcc.common.outputfiles.srec>
+  <armgcc.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>XI_DEBUG_OUTPUT=0</Value>
+      <Value>XI_DEBUG_ASSERT=0</Value>
+      <Value>XI_DEBUG_EXTRA_INFO=0</Value>
+      <Value>XI_FS_MEMORY</Value>
+      <Value>XI_NO_TLS_LAYER</Value>
+      <Value>NDEBUG</Value>
+    </ListValues>
+  </armgcc.compiler.symbols.DefSymbols>
+  <armgcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\arm\cmsis\5.0.1\CMSIS\Include\</Value>
+      <Value>%24(PackRepoDir)\atmel\SAM4E_DFP\1.1.57\ic.sam4e\include</Value>
+      <Value>../../../../..</Value>
+      <Value>../../../../../include</Value>
+      <Value>../../../../../include/bsp</Value>
+      <Value>../../../../../src/bsp</Value>
+      <Value>../../../../../src/bsp/platform/atmel_sam4e</Value>
+      <Value>../../../../../src/libxively/datastructures</Value>
+      <Value>../../../../../src/libxively/event_dispatcher</Value>
+      <Value>../../../../../src/libxively/event_loop</Value>
+      <Value>../../../../../src/libxively/io/fs</Value>
+      <Value>../../../../../src/libxively/io/net</Value>
+      <Value>../../../../../src/libxively/memory</Value>
+      <Value>../../../../../src/libxively/mqtt/codec</Value>
+      <Value>../../../../../src/libxively/mqtt/logic</Value>
+      <Value>../../../../../src/libxively/platform/xi_thread</Value>
+    </ListValues>
+  </armgcc.compiler.directories.IncludePaths>
+  <armgcc.compiler.optimization.level>Optimize for size (-Os)</armgcc.compiler.optimization.level>
+  <armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
+  <armgcc.compiler.warnings.AllWarnings>True</armgcc.compiler.warnings.AllWarnings>
+  <armgcc.linker.libraries.Libraries>
+    <ListValues>
+      <Value>libm</Value>
+    </ListValues>
+  </armgcc.linker.libraries.Libraries>
+  <armgcc.linker.optimization.GarbageCollectUnusedSections>True</armgcc.linker.optimization.GarbageCollectUnusedSections>
+  <armgcc.linker.memorysettings.ExternalRAM>False</armgcc.linker.memorysettings.ExternalRAM>
+  <armgcc.assembler.general.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\arm\cmsis\5.0.1\CMSIS\Include\</Value>
+      <Value>%24(PackRepoDir)\atmel\SAM4E_DFP\1.1.57\ic.sam4e\include</Value>
+    </ListValues>
+  </armgcc.assembler.general.IncludePaths>
+  <armgcc.preprocessingassembler.general.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\arm\cmsis\5.0.1\CMSIS\Include\</Value>
+      <Value>%24(PackRepoDir)\atmel\SAM4E_DFP\1.1.57\ic.sam4e\include</Value>
+    </ListValues>
+  </armgcc.preprocessingassembler.general.IncludePaths>
+</ArmGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <ArmGcc>
+  <armgcc.common.outputfiles.hex>True</armgcc.common.outputfiles.hex>
+  <armgcc.common.outputfiles.lss>True</armgcc.common.outputfiles.lss>
+  <armgcc.common.outputfiles.eep>True</armgcc.common.outputfiles.eep>
+  <armgcc.common.outputfiles.bin>True</armgcc.common.outputfiles.bin>
+  <armgcc.common.outputfiles.srec>True</armgcc.common.outputfiles.srec>
+  <armgcc.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>XI_DEBUG_OUTPUT=0</Value>
+      <Value>XI_DEBUG_ASSERT=0</Value>
+      <Value>XI_DEBUG_EXTRA_INFO=0</Value>
+      <Value>XI_FS_MEMORY</Value>
+      <Value>XI_NO_TLS_LAYER</Value>
+      <Value>DEBUG</Value>
+    </ListValues>
+  </armgcc.compiler.symbols.DefSymbols>
+  <armgcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\arm\cmsis\5.0.1\CMSIS\Include\</Value>
+      <Value>%24(PackRepoDir)\atmel\SAM4E_DFP\1.1.57\ic.sam4e\include</Value>
+      <Value>../../../../../include</Value>
+      <Value>../../../../../include/bsp</Value>
+      <Value>../../../../../src/bsp</Value>
+      <Value>../../../../../src/bsp/platform/atmel_sam4e</Value>
+      <Value>../../../../../src/libxively</Value>
+      <Value>../../../../../src/libxively/control_topic</Value>
+      <Value>../../../../../src/libxively/datastructures</Value>
+      <Value>../../../../../src/libxively/event_dispatcher</Value>
+      <Value>../../../../../src/libxively/event_loop</Value>
+      <Value>../../../../../src/libxively/io/fs</Value>
+      <Value>../../../../../src/libxively/io/net</Value>
+      <Value>../../../../../src/libxively/memory</Value>
+      <Value>../../../../../src/libxively/mqtt/codec</Value>
+      <Value>../../../../../src/libxively/mqtt/logic</Value>
+      <Value>../../../../../src/libxively/platform/xi_thread</Value>
+    </ListValues>
+  </armgcc.compiler.directories.IncludePaths>
+  <armgcc.compiler.optimization.level>Optimize (-O1)</armgcc.compiler.optimization.level>
+  <armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
+  <armgcc.compiler.optimization.DebugLevel>Maximum (-g3)</armgcc.compiler.optimization.DebugLevel>
+  <armgcc.compiler.warnings.AllWarnings>True</armgcc.compiler.warnings.AllWarnings>
+  <armgcc.linker.libraries.Libraries>
+    <ListValues>
+      <Value>libm</Value>
+    </ListValues>
+  </armgcc.linker.libraries.Libraries>
+  <armgcc.linker.optimization.GarbageCollectUnusedSections>True</armgcc.linker.optimization.GarbageCollectUnusedSections>
+  <armgcc.linker.memorysettings.ExternalRAM />
+  <armgcc.assembler.general.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\arm\cmsis\5.0.1\CMSIS\Include\</Value>
+      <Value>%24(PackRepoDir)\atmel\SAM4E_DFP\1.1.57\ic.sam4e\include</Value>
+    </ListValues>
+  </armgcc.assembler.general.IncludePaths>
+  <armgcc.assembler.debugging.DebugLevel>Default (-g)</armgcc.assembler.debugging.DebugLevel>
+  <armgcc.preprocessingassembler.general.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\arm\cmsis\5.0.1\CMSIS\Include\</Value>
+      <Value>%24(PackRepoDir)\atmel\SAM4E_DFP\1.1.57\ic.sam4e\include</Value>
+    </ListValues>
+  </armgcc.preprocessingassembler.general.IncludePaths>
+  <armgcc.preprocessingassembler.debugging.DebugLevel>Default (-Wa,-g)</armgcc.preprocessingassembler.debugging.DebugLevel>
+</ArmGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\..\src\bsp\platform\atmel_sam4e\xi_bsp_hton.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\bsp\platform\atmel_sam4e\xi_bsp_hton.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\bsp\platform\atmel_sam4e\xi_bsp_io_net_atmel_sam4e.c">
+      <SubType>compile</SubType>
+      <Link>libxively\src\bsp\platform\atmel_sam4e\xi_bsp_io_net_atmel_sam4e.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\bsp\platform\atmel_sam4e\xi_bsp_mem_atmel_sam4e.c">
+      <SubType>compile</SubType>
+      <Link>libxively\src\bsp\platform\atmel_sam4e\xi_bsp_mem_atmel_sam4e.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\bsp\platform\atmel_sam4e\xi_bsp_rng_atmel_sam4e.c">
+      <SubType>compile</SubType>
+      <Link>libxively\src\bsp\platform\atmel_sam4e\xi_bsp_rng_atmel_sam4e.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\bsp\platform\atmel_sam4e\xi_bsp_time_atmel_sam4e.c">
+      <SubType>compile</SubType>
+      <Link>libxively\src\bsp\platform\atmel_sam4e\xi_bsp_time_atmel_sam4e.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\datastructures\xi_list.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\datastructures\xi_list.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\datastructures\xi_memory_type.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\datastructures\xi_memory_type.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\datastructures\xi_vector.c">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\datastructures\xi_vector.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\datastructures\xi_vector.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\datastructures\xi_vector.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\event_dispatcher\xi_event_dispatcher.c">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\event_dispatcher\xi_event_dispatcher.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\event_dispatcher\xi_event_dispatcher_api.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\event_dispatcher\xi_event_dispatcher_api.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\event_dispatcher\xi_event_dispatcher_macros.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\event_dispatcher\xi_event_dispatcher_macros.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\event_dispatcher\xi_event_handle.c">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\event_dispatcher\xi_event_handle.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\event_dispatcher\xi_event_handle.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\event_dispatcher\xi_event_handle.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\event_dispatcher\xi_event_handle_queue.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\event_dispatcher\xi_event_handle_queue.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\event_dispatcher\xi_event_handle_typedef.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\event_dispatcher\xi_event_handle_typedef.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\event_dispatcher\xi_event_thread_dispatcher.c">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\event_dispatcher\xi_event_thread_dispatcher.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\event_dispatcher\xi_event_thread_dispatcher.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\event_dispatcher\xi_event_thread_dispatcher.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\event_dispatcher\xi_time_event.c">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\event_dispatcher\xi_time_event.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\event_dispatcher\xi_time_event.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\event_dispatcher\xi_time_event.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\event_loop\xi_event_loop.c">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\event_loop\xi_event_loop.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\event_loop\xi_event_loop.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\event_loop\xi_event_loop.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\io\fs\memory\xi_fs_memory.c">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\io\fs\memory\xi_fs_memory.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\io\fs\xi_fs_api.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\io\fs\xi_fs_api.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\io\fs\xi_fs_bsp_to_xi_mapping.c">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\io\fs\xi_fs_bsp_to_xi_mapping.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\io\fs\xi_fs_bsp_to_xi_mapping.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\io\fs\xi_fs_bsp_to_xi_mapping.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\io\fs\xi_fs_filenames.c">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\io\fs\xi_fs_filenames.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\io\fs\xi_fs_filenames.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\io\fs\xi_fs_filenames.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\io\fs\xi_fs_filename_defs.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\io\fs\xi_fs_filename_defs.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\io\fs\xi_fs_header.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\io\fs\xi_fs_header.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\io\fs\xi_resource_manager.c">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\io\fs\xi_resource_manager.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\io\fs\xi_resource_manager.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\io\fs\xi_resource_manager.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\io\net\xi_io_net_layer.c">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\io\net\xi_io_net_layer.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\io\net\xi_io_net_layer.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\io\net\xi_io_net_layer.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\io\net\xi_io_net_layer_state.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\io\net\xi_io_net_layer_state.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\memory\xi_allocator.c">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\memory\xi_allocator.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\memory\xi_allocator.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\memory\xi_allocator.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\mqtt\codec\xi_mqtt_codec_layer.c">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\mqtt\codec\xi_mqtt_codec_layer.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\mqtt\codec\xi_mqtt_codec_layer.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\mqtt\codec\xi_mqtt_codec_layer.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\mqtt\codec\xi_mqtt_codec_layer_data.c">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\mqtt\codec\xi_mqtt_codec_layer_data.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\mqtt\codec\xi_mqtt_codec_layer_data.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\mqtt\codec\xi_mqtt_codec_layer_data.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\mqtt\codec\xi_mqtt_errors.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\mqtt\codec\xi_mqtt_errors.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\mqtt\codec\xi_mqtt_message.c">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\mqtt\codec\xi_mqtt_message.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\mqtt\codec\xi_mqtt_message.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\mqtt\codec\xi_mqtt_message.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\mqtt\codec\xi_mqtt_parser.c">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\mqtt\codec\xi_mqtt_parser.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\mqtt\codec\xi_mqtt_parser.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\mqtt\codec\xi_mqtt_parser.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\mqtt\codec\xi_mqtt_serialiser.c">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\mqtt\codec\xi_mqtt_serialiser.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\mqtt\codec\xi_mqtt_serialiser.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\mqtt\codec\xi_mqtt_serialiser.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\mqtt\logic\xi_mqtt_logic_layer.c">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\mqtt\logic\xi_mqtt_logic_layer.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\mqtt\logic\xi_mqtt_logic_layer.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\mqtt\logic\xi_mqtt_logic_layer.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\mqtt\logic\xi_mqtt_logic_layer_commands.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\mqtt\logic\xi_mqtt_logic_layer_commands.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\mqtt\logic\xi_mqtt_logic_layer_connection_helpers.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\mqtt\logic\xi_mqtt_logic_layer_connection_helpers.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\mqtt\logic\xi_mqtt_logic_layer_connect_command.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\mqtt\logic\xi_mqtt_logic_layer_connect_command.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\mqtt\logic\xi_mqtt_logic_layer_data.c">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\mqtt\logic\xi_mqtt_logic_layer_data.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\mqtt\logic\xi_mqtt_logic_layer_data.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\mqtt\logic\xi_mqtt_logic_layer_data.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\mqtt\logic\xi_mqtt_logic_layer_data_helpers.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\mqtt\logic\xi_mqtt_logic_layer_data_helpers.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\mqtt\logic\xi_mqtt_logic_layer_handlers.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\mqtt\logic\xi_mqtt_logic_layer_handlers.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\mqtt\logic\xi_mqtt_logic_layer_helpers.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\mqtt\logic\xi_mqtt_logic_layer_helpers.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\mqtt\logic\xi_mqtt_logic_layer_keepalive_handler.c">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\mqtt\logic\xi_mqtt_logic_layer_keepalive_handler.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\mqtt\logic\xi_mqtt_logic_layer_keepalive_handler.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\mqtt\logic\xi_mqtt_logic_layer_keepalive_handler.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\mqtt\logic\xi_mqtt_logic_layer_publish_handler.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\mqtt\logic\xi_mqtt_logic_layer_publish_handler.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\mqtt\logic\xi_mqtt_logic_layer_publish_q0_command.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\mqtt\logic\xi_mqtt_logic_layer_publish_q0_command.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\mqtt\logic\xi_mqtt_logic_layer_publish_q1_command.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\mqtt\logic\xi_mqtt_logic_layer_publish_q1_command.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\mqtt\logic\xi_mqtt_logic_layer_subscribe_command.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\mqtt\logic\xi_mqtt_logic_layer_subscribe_command.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\mqtt\logic\xi_mqtt_logic_layer_task_helpers.c">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\mqtt\logic\xi_mqtt_logic_layer_task_helpers.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\mqtt\logic\xi_mqtt_logic_layer_task_helpers.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\mqtt\logic\xi_mqtt_logic_layer_task_helpers.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\platform\xi_thread\xi_critical_section.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\platform\xi_thread\xi_critical_section.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\platform\xi_thread\xi_thread_ids.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\platform\xi_thread\xi_thread_ids.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\platform\xi_thread\xi_thread_threadpool.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\platform\xi_thread\xi_thread_threadpool.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\platform\xi_thread\xi_thread_workerthread.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\platform\xi_thread\xi_thread_workerthread.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\xively.c">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\xively.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\xi_backoff_lut_config.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\xi_backoff_lut_config.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\xi_backoff_status.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\xi_backoff_status.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\xi_backoff_status_api.c">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\xi_backoff_status_api.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\xi_backoff_status_api.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\xi_backoff_status_api.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\xi_common.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\xi_common.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\xi_config.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\xi_config.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\xi_config_mbed.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\xi_config_mbed.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\xi_connection_data.c">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\xi_connection_data.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\xi_connection_data.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\xi_connection_data.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\xi_coroutine.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\xi_coroutine.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\xi_data_desc.c">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\xi_data_desc.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\xi_data_desc.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\xi_data_desc.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\xi_debug.c">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\xi_debug.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\xi_debug.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\xi_debug.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\xi_err.c">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\xi_err.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\xi_err.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\xi_err.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\xi_globals.c">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\xi_globals.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\xi_globals.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\xi_globals.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\xi_handle.c">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\xi_handle.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\xi_handle.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\xi_handle.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\xi_helpers.c">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\xi_helpers.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\xi_helpers.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\xi_helpers.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\xi_internals.c">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\xi_internals.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\xi_internals.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\xi_internals.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\xi_io_timeouts.c">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\xi_io_timeouts.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\xi_io_timeouts.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\xi_io_timeouts.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\xi_layer.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\xi_layer.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\xi_layers_ids.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\xi_layers_ids.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\xi_layer_api.c">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\xi_layer_api.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\xi_layer_api.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\xi_layer_api.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\xi_layer_chain.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\xi_layer_chain.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\xi_layer_connectivity.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\xi_layer_connectivity.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\xi_layer_debug_info.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\xi_layer_debug_info.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\xi_layer_default_allocators.c">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\xi_layer_default_allocators.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\xi_layer_default_allocators.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\xi_layer_default_allocators.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\xi_layer_default_functions.c">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\xi_layer_default_functions.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\xi_layer_default_functions.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\xi_layer_default_functions.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\xi_layer_factory.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\xi_layer_factory.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\xi_layer_factory_interface.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\xi_layer_factory_interface.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\xi_layer_interface.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\xi_layer_interface.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\xi_layer_macros.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\xi_layer_macros.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\xi_layer_stack.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\xi_layer_stack.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\xi_layer_state.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\xi_layer_state.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\xi_layer_type.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\xi_layer_type.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\xi_macros.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\xi_macros.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\xi_mqtt_host_accessor.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\xi_mqtt_host_accessor.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\xi_timed_task.c">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\xi_timed_task.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\xi_timed_task.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\xi_timed_task.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\xi_tuple.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\xi_tuple.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\xi_tuples.c">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\xi_tuples.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\xi_tuples.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\xi_tuples.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\xi_types.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\xi_types.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\xi_user_sub_call_wrapper.c">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\xi_user_sub_call_wrapper.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\xi_user_sub_call_wrapper.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\xi_user_sub_call_wrapper.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\src\libxively\xi_version.h">
+      <SubType>compile</SubType>
+      <Link>libxively\src\libxively\xi_version.h</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="libxively\" />
+    <Folder Include="libxively\src\" />
+    <Folder Include="libxively\src\bsp\" />
+    <Folder Include="libxively\src\bsp\platform\" />
+    <Folder Include="libxively\src\bsp\platform\atmel_sam4e\" />
+    <Folder Include="libxively\src\libxively\" />
+    <Folder Include="libxively\src\libxively\datastructures\" />
+    <Folder Include="libxively\src\libxively\event_dispatcher\" />
+    <Folder Include="libxively\src\libxively\event_loop\" />
+    <Folder Include="libxively\src\libxively\io\" />
+    <Folder Include="libxively\src\libxively\io\fs\" />
+    <Folder Include="libxively\src\libxively\io\fs\memory\" />
+    <Folder Include="libxively\src\libxively\io\net\" />
+    <Folder Include="libxively\src\libxively\memory\" />
+    <Folder Include="libxively\src\libxively\mqtt\" />
+    <Folder Include="libxively\src\libxively\mqtt\codec\" />
+    <Folder Include="libxively\src\libxively\mqtt\logic\" />
+    <Folder Include="libxively\src\libxively\platform\" />
+    <Folder Include="libxively\src\libxively\platform\xi_thread\" />
+    <Folder Include="src" />
+    <Folder Include="src\bsp" />
+    <Folder Include="src\bsp\platform" />
+    <Folder Include="src\bsp\platform\atmel_sam4e" />
+    <Folder Include="src\libxively" />
+    <Folder Include="src\libxively\datastructures" />
+    <Folder Include="src\libxively\event_dispatcher" />
+    <Folder Include="src\libxively\event_loop" />
+    <Folder Include="src\libxively\io" />
+    <Folder Include="src\libxively\io\fs" />
+    <Folder Include="src\libxively\io\fs\memory" />
+    <Folder Include="src\libxively\io\net" />
+    <Folder Include="src\libxively\memory" />
+    <Folder Include="src\libxively\mqtt" />
+    <Folder Include="src\libxively\mqtt\codec" />
+    <Folder Include="src\libxively\mqtt\logic" />
+    <Folder Include="src\libxively\platform" />
+    <Folder Include="src\libxively\platform\xi_thread" />
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+</Project>
